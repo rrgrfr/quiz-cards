@@ -1,0 +1,19 @@
+{
+  "project": "Personal Quiz Cards Web App",
+  "package_version": "1.8",
+  "documents": [
+    "DECISIONS.md",
+    "00_README.md",
+    "01_PROJECT_BRIEF.md",
+    "02_PRD.md",
+    "03_DECISION_REGISTER.md",
+    "04_UX_SPEC.md",
+    "05_TECHNICAL_SPEC.md",
+    "06_DATA_AND_JSON_FORMAT.md",
+    "07_TEST_STRATEGY.md",
+    "08_IMPLEMENTATION_PLAN.md",
+    "09_RISKS_AND_OPEN_QUESTIONS.md",
+    "10_DEEPSEEK_HARNESS_PROMPT.md"
+  ],
+  "status": "Stages 1-6 implemented; stage 6 automation complete; iPhone manual checklist and git init pending"
+}
