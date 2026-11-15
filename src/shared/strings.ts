@@ -19,7 +19,7 @@ export const STRINGS = {
   decks: {
     title: 'Наборы',
     emptyTitle: 'Пока нет наборов',
-    emptyText: 'Создайте первый набор или импортируйте его из JSON на этапе 5.',
+    emptyText: 'Создайте первый набор или импортируйте его из JSON в настройках.',
     create: 'Создать набор',
     archiveLink: 'Архив',
     cardsCount: (count: number): string =>

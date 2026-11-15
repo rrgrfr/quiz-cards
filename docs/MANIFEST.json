@@ -1,6 +1,6 @@
 {
   "project": "Personal Quiz Cards Web App",
-  "package_version": "1.8",
+  "package_version": "2.1",
   "documents": [
     "DECISIONS.md",
     "00_README.md",
@@ -13,7 +13,9 @@
     "07_TEST_STRATEGY.md",
     "08_IMPLEMENTATION_PLAN.md",
     "09_RISKS_AND_OPEN_QUESTIONS.md",
-    "10_DEEPSEEK_HARNESS_PROMPT.md"
+    "10_DEEPSEEK_HARNESS_PROMPT.md",
+    "11_ANALYSIS_AND_IMPROVEMENTS.md",
+    "12_SPEC_V2.md"
   ],
-  "status": "Stages 1-6 implemented; stage 6 automation complete; iPhone manual checklist and git init pending"
+  "status": "Stages 1-6 implemented; stage 7 (v2: count slider, large example deck) implemented; 106 tests; iPhone manual checklist and git init pending"
 }
