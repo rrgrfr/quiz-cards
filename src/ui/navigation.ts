@@ -5,6 +5,7 @@ export const TABS: readonly Tab[] = ['decks', 'stats', 'settings'];
 export type Route =
   | { name: Tab }
   | { name: 'create-deck' }
+  | { name: 'ready-decks' }
   | { name: 'deck'; deckId: string }
   | { name: 'create-card'; deckId: string }
   | { name: 'card'; cardId: string }

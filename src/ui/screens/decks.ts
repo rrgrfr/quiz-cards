@@ -28,14 +28,24 @@ export function renderDecks(store: Store, nav: Navigation): HTMLElement {
     nav.push({ name: 'create-deck' });
   });
 
+  const ready = el('button', 'secondary-button');
+  ready.type = 'button';
+  ready.textContent = STRINGS.decks.ready;
+  ready.addEventListener('click', () => {
+    nav.push({ name: 'ready-decks' });
+  });
+
+  const readyHint = el('p', 'screen-note');
+  readyHint.textContent = STRINGS.decks.readyHint;
+
   if (decks.length === 0) {
     const empty = el('div', 'empty-state');
     const emptyTitle = el('p', 'empty-title');
     emptyTitle.textContent = STRINGS.decks.emptyTitle;
     const emptyText = el('p', 'empty-text');
     emptyText.textContent = STRINGS.decks.emptyText;
-    empty.append(emptyTitle, emptyText, create);
-    screen.append(empty);
+    empty.append(emptyTitle, emptyText);
+    screen.append(empty, create, ready, readyHint);
     return screen;
   }
 
@@ -62,6 +72,6 @@ export function renderDecks(store: Store, nav: Navigation): HTMLElement {
     list.append(item);
   }
 
-  screen.append(list, create);
+  screen.append(list, create, ready, readyHint);
   return screen;
 }

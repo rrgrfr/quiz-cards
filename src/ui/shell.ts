@@ -10,6 +10,7 @@ import { renderCardForm } from './screens/card-form';
 import { renderDeck } from './screens/deck';
 import { renderDeckForm } from './screens/deck-form';
 import { renderDecks } from './screens/decks';
+import { renderReadyDecks } from './screens/ready-decks';
 import { renderSettings } from './screens/settings';
 import { renderStats } from './screens/stats';
 import { renderTest } from './screens/test';
@@ -35,6 +36,8 @@ function renderRoute(route: Route, store: Store, nav: Navigation): HTMLElement {
       return renderSettings(store, nav);
     case 'create-deck':
       return renderDeckForm(store, nav);
+    case 'ready-decks':
+      return renderReadyDecks(store, nav);
     case 'deck':
       return renderDeck(store, nav, route.deckId);
     case 'create-card':

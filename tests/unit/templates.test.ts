@@ -6,12 +6,7 @@ function readTemplate(name: string): string {
   return readFileSync(new URL(`../../docs/templates/${name}`, import.meta.url), 'utf8');
 }
 
-describe.each([
-  'deck-template.json',
-  'example-deck.json',
-  'sql-day7-deck.json',
-  'qa-core-239.json',
-])('%s', (name) => {
+describe.each(['deck-template.json', 'example-deck.json', 'sql-day7-deck.json'])('%s', (name) => {
   it('is valid according to the personal-quiz-deck contract', () => {
     const result = parseDeckFile(readTemplate(name));
 
@@ -28,16 +23,5 @@ describe.each([
       expect(card.correctIndex).toBeGreaterThanOrEqual(0);
       expect(card.correctIndex).toBeLessThanOrEqual(3);
     }
-  });
-});
-
-describe('qa-core-239 example', () => {
-  it('is the large example deck of 239 cards', () => {
-    const result = parseDeckFile(readTemplate('qa-core-239.json'));
-
-    expect(result.ok).toBe(true);
-    if (!result.ok) return;
-    expect(result.value.cards).toHaveLength(239);
-    expect(result.value.title).toContain('QA');
   });
 });
